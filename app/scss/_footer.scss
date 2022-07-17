@@ -1,0 +1,115 @@
+.footer{
+    background-color: $darkBlue;
+    padding: 2.5rem;
+    text-align: center;
+
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+        @include breakpoint-up(lg){
+            display:grid;   
+            grid-template-columns:2fr 1fr 1fr 3fr;
+            grid-template-rows:1fr auto ;
+            grid-template-areas: 
+            'logo links1 links2 cta'
+            'socials links1 links2 copyright';
+            gap: 1rem;
+            justify-items: start;
+        }
+    }
+
+    a{
+        color:$white;
+        display: inline-block;
+    }
+
+    &__logo{
+        margin-bottom: 1.875rem;
+        display: block;
+        @include breakpoint-down(md) {
+            margin-bottom: .875rem;
+          }
+        @include breakpoint-up(lg){
+            grid-area: logo;
+        }
+    }
+
+    &__socials{
+        margin-bottom: 1.875rem;
+
+        a:not(:last-child) {
+            margin-right: .5rem;
+          }
+        a{
+            svg  path{
+                transition: fill 150ms ease-in;
+              }
+              &:hover svg path{
+
+                  fill: $limeGreen;
+                }
+            }
+          @include breakpoint-up(lg){
+            grid-area: socials;
+        }
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+       > a{
+            line-height: 2.5;
+            display: inline;
+            font-size: $font-sm;
+            transition: color 150ms ease-in;
+
+            &:hover{
+                color: $limeGreen;
+            }
+        
+        }
+       
+        &.col1{
+            @include breakpoint-up(lg){
+                grid-area: links1;
+            }
+        }
+        &.col2{
+
+            margin-bottom:  1.875rem;
+            @include breakpoint-up(lg){
+                grid-area: links2;
+            }
+        }
+        
+    }
+    &__cta{
+        @include breakpoint-up(lg){
+            grid-area: cta;
+            align-self: end;
+            justify-self: end;
+        }
+        a{
+            margin-bottom: 1.875rem;
+            line-height: 1.3;
+        }
+    }
+    &__copyright{
+        margin-bottom: 1.875rem;
+        font-size:0.8125rem;
+        @include breakpoint-up(lg){
+            grid-area: copyright;
+            align-self: end;
+            justify-self: end;
+        }
+    }
+    
+  .attribution {
+    margin-top: 4rem;
+    font-size: 0.875rem;
+  }
+}
