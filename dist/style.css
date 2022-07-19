@@ -298,7 +298,7 @@ p {
 }
 .hero__img {
   position: relative;
-  background-image: url("../../images/bg-intro-mobile.svg");
+  background-image: url("../images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -335,7 +335,7 @@ p {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("../../images/image-mockups.png");
+  background-image: url("../images/image-mockups.png");
   background-size: 64%;
   background-repeat: no-repeat;
   background-position: center bottom;
