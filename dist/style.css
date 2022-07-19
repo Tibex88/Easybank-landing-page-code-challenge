@@ -322,7 +322,7 @@ p {
   .hero__img::before {
     position: absolute;
     content: "";
-    background-image: url("../../images/bg-intro-desktop.svg");
+    background-image: url("../images/bg-intro-desktop.svg");
     background-position: 0 88%;
     background-repeat: no-repeat;
     background-size: 175%;
